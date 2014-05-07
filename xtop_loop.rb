@@ -2,13 +2,9 @@ require 'curses'
 
 # XtopLoop: Fetch input from user and respond.
 class XtopLoop
-  include Curses
+  extend Curses
 
-  def initialize(view)
-    @view = view
-  end
-
-  def start
+  def self.start(view)
     begin
       Signal.trap("SIGINT") do
         exit(0)
@@ -17,7 +13,7 @@ class XtopLoop
       cbreak
 
       while true
-        @view.redraw
+        view.redraw
         yield(getch)
       end
     ensure

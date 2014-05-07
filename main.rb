@@ -2,7 +2,9 @@ Dir.glob(File.expand_path('../xtop_*.rb', __FILE__)).each { |f| require f }
 
 view = XtopView.new
 
-XtopLoop.new(view).start do |key|
+# ... set up any URL checkers to run in the background ...
+
+XtopLoop.start(view) do |key|
   case key
   when "q"
     exit(0)

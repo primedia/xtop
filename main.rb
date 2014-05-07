@@ -1,8 +1,8 @@
-require File.expand_path('../xtop_view.rb', __FILE__)
+Dir.glob(File.expand_path('../xtop_*.rb', __FILE__)).each { |f| require f }
 
 view = XtopView.new
 
-view.main_loop do |key|
+XtopLoop.new(view).start do |key|
   case key
   when "q"
     exit(0)

@@ -11,8 +11,8 @@ class XtopView
     @statuses[key] = value
   end
 
-  # refresh the main view
-  def refresh_xtop_view
+  # redraw the main view
+  def redraw
     clear # clear screen
     setpos(0, 0) # start at top of screen
     add_col2_line("Xtop", "RentPath") # render title line
@@ -35,23 +35,6 @@ class XtopView
       "yahoo.com" => "yellow",
       "bing.com" => "red"
     }
-  end
-
-  def main_loop
-    begin
-      Signal.trap("SIGINT") do
-        exit(0)
-      end
-
-      cbreak
-
-      while true
-        refresh_xtop_view()
-        yield(getch)
-      end
-    ensure
-      close_screen
-    end
   end
 
   private

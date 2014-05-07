@@ -35,25 +35,19 @@ class XtopView
       "yahoo.com" => "yellow",
       "bing.com" => "red"
     }
+  end
 
-
+  def main_loop
     begin
       Signal.trap("SIGINT") do
         exit(0)
       end
 
       cbreak
+
       while true
         refresh_xtop_view()
-
-        case getch
-        when "q"
-          exit(0)
-        when "r"
-          @statuses.each_key do |key|
-            update_status(key, "red")
-          end
-        end
+        yield(getch)
       end
     ensure
       close_screen

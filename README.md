@@ -28,7 +28,9 @@ Or install it yourself as:
 
 ## Usage
 
-...
+To use Xtop (experimental, for use while developing):
+
+    ruby main.rb
 
 ## Contributing
 

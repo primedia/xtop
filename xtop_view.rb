@@ -1,4 +1,5 @@
 require "curses"
+require File.expand_path('../url_checker.rb', __FILE__)
 
 # XtopView: a simple view for the status of each URL. Colors, unit tests,
 # refactoring is pending. resizing smoothly is out of scope (see top's
@@ -9,6 +10,7 @@ class XtopView
   # use this to update the status of a single URL.
   def update_status(key, value)
     @statuses[key] = value
+    redraw
   end
 
   # redraw the main view
@@ -26,15 +28,18 @@ class XtopView
     refresh # show
   end
 
-  def initialize
+  def initialize(checkers)
     init_screen
     init_colors
 
-    @statuses = {
-      "google.com" => "green",
-      "yahoo.com" => "yellow",
-      "bing.com" => "red"
-    }
+    @statuses = Hash[checkers.map { |k,v| [k, "white"] }]
+
+    Thread.new do
+      while true
+        UrlChecker.check(self, checkers)
+        sleep(0.8)
+      end
+    end
   end
 
   private

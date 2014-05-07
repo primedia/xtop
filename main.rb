@@ -1,8 +1,10 @@
 Dir.glob(File.expand_path('../xtop_*.rb', __FILE__)).each { |f| require f }
 
-view = XtopView.new
-
-# ... set up any URL checkers to run in the background ...
+view = XtopView.new({
+  "google.com" => proc { sleep Random.rand(5)/4.0; :ok },
+  "yahoo.com" => proc { :error },
+  "bing.com" => proc { :ok }
+})
 
 XtopLoop.start(view) do |key|
   case key

@@ -13,25 +13,26 @@ class XtopView
 
   # refresh the main view
   def refresh_xtop_view
-    clear
-    setpos(0, 0)
-    addstr("Xtop" + (" " * (cols - 12)) + "RentPath")
+    clear # clear screen
+    setpos(0, 0) # start at top of screen
+    addstr(col2_line("Xtop", "RentPath")) # render title line
 
-    setpos(2, 0)
-    addstr("URL" + (" " * (cols - 9)) + "STATUS")
-    @statuses.each do |k,v|
-      addstr(k + (" " * (cols - 16)) + v)
+    setpos(2, 0) # skip a line
+    addstr(col2_line("URL", "STATUS")) # render column headers
+    @statuses.each do |k,v| # render each line
+      addstr(col2_line(k, v))
     end
-    refresh
+    curs_set(0) # clear cursor
+    refresh # show
   end
 
   def initialize
     init_screen
 
     @statuses = {
-      "google.com" => " green",
-      "yahoo.com " => "yellow",
-      "bing.com  " => "   red"
+      "google.com" => "green",
+      "yahoo.com" => "yellow",
+      "bing.com" => "red"
     }
 
     begin
@@ -43,17 +44,23 @@ class XtopView
       while true
         refresh_xtop_view()
 
-        key = getch
-        if key == "q"
+        case getch
+        when "q"
           exit(0)
-        elsif key == "r"
+        when "r"
           @statuses.each_key do |key|
-            update_status(key, "   red")
+            update_status(key, "red")
           end
         end
       end
     ensure
       close_screen
     end
+  end
+
+  private
+
+  def col2_line(val1, val2)
+    sprintf("%-#{cols-10}s%-10s", val1, val2)
   end
 end

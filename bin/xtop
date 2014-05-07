@@ -1,4 +1,5 @@
-Dir.glob(File.expand_path('../xtop_*.rb', __FILE__)).each { |f| require f }
+#!/usr/bin/env ruby
+require 'xtop'
 
 file = `pwd`.chomp + "/.xtop.rb"
 

@@ -1,0 +1,1247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <!-- classpage -- >
+    <!-- RD version: 0.26.0  -->
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  
+  <meta content="2014-04-26 10:53:40 -0700" http-equiv="change-date" />
+  <!-- rel_prefix  = '../..'  ENV['RDOC_FOR_WEBSITE']   = false-->
+    
+  <!-- rel_prefix = '../..'   asset_rel_prefix = '../..'  --> 
+  <title>Class: Gem::Package::TarInput (Ruby 1.9.3) </title>
+  <!-- link rel="stylesheet" href="../..css/obf.css"  -->
+  <link rel="stylesheet" href="../../css/inuit.css" >
+  <link rel="stylesheet" href="../../css/grid.inuit.css" >
+  <link rel="stylesheet" href="../../css/2011.css" type="text/css" >
+  <link rel="stylesheet" href="../../css/rdoc.css" type="text/css" >
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/rubydoc.js" type="text/javascript" charset="utf-8"></script> 
+
+ 
+<script src="../../js/highlight.min.js"></script>
+<script> 
+  hljs.tabReplace = '  ';
+  hljs.initHighlightingOnLoad();
+  </script> 
+
+  <style type='text/css'>
+
+    #vulns-alert #vulns{
+      background-color: #c33 ! important;
+      width: 100%;
+      text-align: center;
+   }
+   
+   #vulns-alert #vulns a {
+    color: #F99 ! important;
+   }
+ </style>
+
+</head>
+
+<body id="top" class="class rdocstar">
+<div id='actionbar' >
+<div class='wrapper'>
+  <ul class='grids g0'></ul>
+</div>
+<span id='vulns-alert'></span>
+</div> <!-- end action bar -->
+ <div class='wrapper'>
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+          
+          
+          <!-- br><a id='alternateFormatLink' class='rotate' href="#" onclick='matchingYardUrl()'>YARD version</a -->
+          
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul id='file-metadata'>
+
+          
+          
+          
+          <li class='in-file'>rubygems/package/tar_input.rb</li>      
+            
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-open">::open</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-each">#each</a></li>
+          
+          <li><a href="#method-i-extract_entry">#extract_entry</a></li>
+          
+          <li><a href="#method-i-load_gemspec">#load_gemspec</a></li>
+          
+          <li><a href="#method-i-zipped_stream">#zipped_stream</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="FSyncDir.html">Gem::Package::FSyncDir</a></li>
+        
+        
+        
+          <li><span class="include">Enumerable</span></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+          
+          
+          
+          <li><a href="../../Cache.html">Cache</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Builder.html">Gem::Builder</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Command.html">Gem::Command</a></li>
+        
+          
+          
+          <li><a href="../../Gem/CommandLineError.html">Gem::CommandLineError</a></li>
+        
+          
+          
+          <li><a href="../../Gem/CommandManager.html">Gem::CommandManager</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/BuildCommand.html">Gem::Commands::BuildCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/CertCommand.html">Gem::Commands::CertCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/CheckCommand.html">Gem::Commands::CheckCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/CleanupCommand.html">Gem::Commands::CleanupCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/ContentsCommand.html">Gem::Commands::ContentsCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/DependencyCommand.html">Gem::Commands::DependencyCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/EnvironmentCommand.html">Gem::Commands::EnvironmentCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/FetchCommand.html">Gem::Commands::FetchCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/GenerateIndexCommand.html">Gem::Commands::GenerateIndexCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/HelpCommand.html">Gem::Commands::HelpCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/InstallCommand.html">Gem::Commands::InstallCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/ListCommand.html">Gem::Commands::ListCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/LockCommand.html">Gem::Commands::LockCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/OutdatedCommand.html">Gem::Commands::OutdatedCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/OwnerCommand.html">Gem::Commands::OwnerCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/PristineCommand.html">Gem::Commands::PristineCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/PushCommand.html">Gem::Commands::PushCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/QueryCommand.html">Gem::Commands::QueryCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/RdocCommand.html">Gem::Commands::RdocCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/SearchCommand.html">Gem::Commands::SearchCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/ServerCommand.html">Gem::Commands::ServerCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/SetupCommand.html">Gem::Commands::SetupCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/SourcesCommand.html">Gem::Commands::SourcesCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/SpecificationCommand.html">Gem::Commands::SpecificationCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/StaleCommand.html">Gem::Commands::StaleCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/UninstallCommand.html">Gem::Commands::UninstallCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/UnpackCommand.html">Gem::Commands::UnpackCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/UpdateCommand.html">Gem::Commands::UpdateCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Commands/WhichCommand.html">Gem::Commands::WhichCommand</a></li>
+        
+          
+          
+          <li><a href="../../Gem/ConfigFile.html">Gem::ConfigFile</a></li>
+        
+          
+          
+          <li><a href="../../Gem/ConsoleUI.html">Gem::ConsoleUI</a></li>
+        
+          
+          
+          <li><a href="../../Gem/DefaultUserInteraction.html">Gem::DefaultUserInteraction</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Dependency.html">Gem::Dependency</a></li>
+        
+          
+          
+          <li><a href="../../Gem/DependencyError.html">Gem::DependencyError</a></li>
+        
+          
+          
+          <li><a href="../../Gem/DependencyInstaller.html">Gem::DependencyInstaller</a></li>
+        
+          
+          
+          <li><a href="../../Gem/DependencyRemovalException.html">Gem::DependencyRemovalException</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Deprecate.html">Gem::Deprecate</a></li>
+        
+          
+          
+          <li><a href="../../Gem/DocManager.html">Gem::DocManager</a></li>
+        
+          
+          
+          <li><a href="../../Gem/DocumentError.html">Gem::DocumentError</a></li>
+        
+          
+          
+          <li><a href="../../Gem/EndOfYAMLException.html">Gem::EndOfYAMLException</a></li>
+        
+          
+          
+          <li><a href="../../Gem/ErrorReason.html">Gem::ErrorReason</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Exception.html">Gem::Exception</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Ext.html">Gem::Ext</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Ext/Builder.html">Gem::Ext::Builder</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Ext/ConfigureBuilder.html">Gem::Ext::ConfigureBuilder</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Ext/ExtConfBuilder.html">Gem::Ext::ExtConfBuilder</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Ext/RakeBuilder.html">Gem::Ext::RakeBuilder</a></li>
+        
+          
+          
+          <li><a href="../../Gem/FakeFetcher.html">Gem::FakeFetcher</a></li>
+        
+          
+          
+          <li><a href="../../Gem/FilePermissionError.html">Gem::FilePermissionError</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Format.html">Gem::Format</a></li>
+        
+          
+          
+          <li><a href="../../Gem/FormatException.html">Gem::FormatException</a></li>
+        
+          
+          
+          <li><a href="../../Gem/GemNotFoundException.html">Gem::GemNotFoundException</a></li>
+        
+          
+          
+          <li><a href="../../Gem/GemNotInHomeException.html">Gem::GemNotInHomeException</a></li>
+        
+          
+          
+          <li><a href="../../Gem/GemPathSearcher.html">Gem::GemPathSearcher</a></li>
+        
+          
+          
+          <li><a href="../../Gem/GemRunner.html">Gem::GemRunner</a></li>
+        
+          
+          
+          <li><a href="../../Gem/GemcutterUtilities.html">Gem::GemcutterUtilities</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Indexer.html">Gem::Indexer</a></li>
+        
+          
+          
+          <li><a href="../../Gem/InstallError.html">Gem::InstallError</a></li>
+        
+          
+          
+          <li><a href="../../Gem/InstallUpdateOptions.html">Gem::InstallUpdateOptions</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Installer.html">Gem::Installer</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Installer/ExtensionBuildError.html">Gem::Installer::ExtensionBuildError</a></li>
+        
+          
+          
+          <li><a href="../../Gem/InstallerTestCase.html">Gem::InstallerTestCase</a></li>
+        
+          
+          
+          <li><a href="../../Gem/InvalidSpecificationException.html">Gem::InvalidSpecificationException</a></li>
+        
+          
+          
+          <li><a href="../../Gem/LocalRemoteOptions.html">Gem::LocalRemoteOptions</a></li>
+        
+          
+          
+          <li><a href="../../Gem/MockGemUi.html">Gem::MockGemUi</a></li>
+        
+          
+          
+          <li><a href="../../Gem/MockGemUi/SystemExitException.html">Gem::MockGemUi::SystemExitException</a></li>
+        
+          
+          
+          <li><a href="../../Gem/MockGemUi/TTY.html">Gem::MockGemUi::TTY</a></li>
+        
+          
+          
+          <li><a href="../../Gem/MockGemUi/TermError.html">Gem::MockGemUi::TermError</a></li>
+        
+          
+          
+          <li><a href="../../Gem/NoAliasYAMLTree.html">Gem::NoAliasYAMLTree</a></li>
+        
+          
+          
+          <li><a href="../../Gem/OldFormat.html">Gem::OldFormat</a></li>
+        
+          
+          
+          <li><a href="../../Gem/OperationNotSupportedError.html">Gem::OperationNotSupportedError</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/BadCheckSum.html">Gem::Package::BadCheckSum</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/ClosedIO.html">Gem::Package::ClosedIO</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/Error.html">Gem::Package::Error</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/FSyncDir.html">Gem::Package::FSyncDir</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/FormatError.html">Gem::Package::FormatError</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/NonSeekableIO.html">Gem::Package::NonSeekableIO</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/TarHeader.html">Gem::Package::TarHeader</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/TarInput.html">Gem::Package::TarInput</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/TarInvalidError.html">Gem::Package::TarInvalidError</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/TarOutput.html">Gem::Package::TarOutput</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/TarReader.html">Gem::Package::TarReader</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/TarReader/Entry.html">Gem::Package::TarReader::Entry</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/TarReader/UnexpectedEOF.html">Gem::Package::TarReader::UnexpectedEOF</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/TarTestCase.html">Gem::Package::TarTestCase</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/TarWriter.html">Gem::Package::TarWriter</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/TarWriter/BoundedStream.html">Gem::Package::TarWriter::BoundedStream</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/TarWriter/FileOverflow.html">Gem::Package::TarWriter::FileOverflow</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/TarWriter/RestrictedStream.html">Gem::Package::TarWriter::RestrictedStream</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Package/TooLongFileName.html">Gem::Package::TooLongFileName</a></li>
+        
+          
+          
+          <li><a href="../../Gem/PackageTask.html">Gem::PackageTask</a></li>
+        
+          
+          
+          <li><a href="../../Gem/PathSupport.html">Gem::PathSupport</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Platform.html">Gem::Platform</a></li>
+        
+          
+          
+          <li><a href="../../Gem/PlatformMismatch.html">Gem::PlatformMismatch</a></li>
+        
+          
+          
+          <li><a href="../../Gem/RemoteError.html">Gem::RemoteError</a></li>
+        
+          
+          
+          <li><a href="../../Gem/RemoteFetcher.html">Gem::RemoteFetcher</a></li>
+        
+          
+          
+          <li><a href="../../Gem/RemoteFetcher/FetchError.html">Gem::RemoteFetcher::FetchError</a></li>
+        
+          
+          
+          <li><a href="../../Gem/RemoteInstallationCancelled.html">Gem::RemoteInstallationCancelled</a></li>
+        
+          
+          
+          <li><a href="../../Gem/RemoteInstallationSkipped.html">Gem::RemoteInstallationSkipped</a></li>
+        
+          
+          
+          <li><a href="../../Gem/RemoteSourceException.html">Gem::RemoteSourceException</a></li>
+        
+          
+          
+          <li><a href="../../Gem/RequirePathsBuilder.html">Gem::RequirePathsBuilder</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Requirement.html">Gem::Requirement</a></li>
+        
+          
+          
+          <li><a href="../../Gem/SSL.html">Gem::SSL</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Security.html">Gem::Security</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Security/Exception.html">Gem::Security::Exception</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Security/Policy.html">Gem::Security::Policy</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Security/Signer.html">Gem::Security::Signer</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Server.html">Gem::Server</a></li>
+        
+          
+          
+          <li><a href="../../Gem/SilentUI.html">Gem::SilentUI</a></li>
+        
+          
+          
+          <li><a href="../../Gem/SpecFetcher.html">Gem::SpecFetcher</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Specification.html">Gem::Specification</a></li>
+        
+          
+          
+          <li><a href="../../Gem/StreamUI.html">Gem::StreamUI</a></li>
+        
+          
+          
+          <li><a href="../../Gem/StreamUI/SilentDownloadReporter.html">Gem::StreamUI::SilentDownloadReporter</a></li>
+        
+          
+          
+          <li><a href="../../Gem/StreamUI/SilentProgressReporter.html">Gem::StreamUI::SilentProgressReporter</a></li>
+        
+          
+          
+          <li><a href="../../Gem/StreamUI/SimpleProgressReporter.html">Gem::StreamUI::SimpleProgressReporter</a></li>
+        
+          
+          
+          <li><a href="../../Gem/StreamUI/VerboseDownloadReporter.html">Gem::StreamUI::VerboseDownloadReporter</a></li>
+        
+          
+          
+          <li><a href="../../Gem/StreamUI/VerboseProgressReporter.html">Gem::StreamUI::VerboseProgressReporter</a></li>
+        
+          
+          
+          <li><a href="../../Gem/SystemExitException.html">Gem::SystemExitException</a></li>
+        
+          
+          
+          <li><a href="../../Gem/TestCase.html">Gem::TestCase</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Text.html">Gem::Text</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Uninstaller.html">Gem::Uninstaller</a></li>
+        
+          
+          
+          <li><a href="../../Gem/UserInteraction.html">Gem::UserInteraction</a></li>
+        
+          
+          
+          <li><a href="../../Gem/Validator.html">Gem::Validator</a></li>
+        
+          
+          
+          <li><a href="../../Gem/VerificationError.html">Gem::VerificationError</a></li>
+        
+          
+          
+          <li><a href="../../Gem/VersionOption.html">Gem::VersionOption</a></li>
+        
+          
+          
+          <li><a href="../../Kernel.html">Kernel</a></li>
+        
+          
+          
+          <li><a href="../../Object.html">Object</a></li>
+        
+          
+          
+          <li><a href="../../Psych.html">Psych</a></li>
+        
+          
+          
+          <li><a href="../../Psych/PrivateType.html">Psych::PrivateType</a></li>
+        
+          
+          
+          <li><a href="../../TempIO.html">TempIO</a></li>
+        
+          
+          
+          <li><a href="../../Version.html">Version</a></li>
+        
+          
+          
+          <li><a href="../../Version/Requirement.html">Version::Requirement</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div> <!-- metadata -->
+  <div class='adzbox'  id="azk83167">
+    
+  </div> 
+  <div id="documentation">
+    <h1 class="class">Gem::Package::TarInput</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="metadata-attribute-method" class="method-detail">
+          <a name="metadata"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">metadata</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description 245">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(io, security_policy = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rubygems/package/tar_input.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">io</span>, <span class="ruby-identifier">security_policy</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@io</span> = <span class="ruby-identifier">io</span>
+  <span class="ruby-ivar">@tarreader</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Package</span><span class="ruby-operator">::</span><span class="ruby-constant">TarReader</span>.<span class="ruby-identifier">new</span> <span class="ruby-ivar">@io</span>
+  <span class="ruby-identifier">has_meta</span> = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-identifier">data_sig</span>, <span class="ruby-identifier">meta_sig</span>, <span class="ruby-identifier">data_dgst</span>, <span class="ruby-identifier">meta_dgst</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">dgst_algo</span> = <span class="ruby-identifier">security_policy</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Security</span><span class="ruby-operator">::</span><span class="ruby-constant">OPT</span>[<span class="ruby-value">:dgst_algo</span>] <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-ivar">@tarreader</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">entry</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;metadata&quot;</span>
+      <span class="ruby-ivar">@metadata</span> = <span class="ruby-identifier">load_gemspec</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">read</span>
+      <span class="ruby-identifier">has_meta</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;metadata.gz&quot;</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-comment"># if we have a security_policy, then pre-read the metadata file</span>
+        <span class="ruby-comment"># and calculate it's digest</span>
+        <span class="ruby-identifier">sio</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">security_policy</span>
+          <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">ensure_ssl_available</span>
+          <span class="ruby-identifier">sio</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">entry</span>.<span class="ruby-identifier">read</span>)
+          <span class="ruby-identifier">meta_dgst</span> = <span class="ruby-identifier">dgst_algo</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-identifier">sio</span>.<span class="ruby-identifier">string</span>)
+          <span class="ruby-identifier">sio</span>.<span class="ruby-identifier">rewind</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-comment"># Ruby 1.8 doesn't have encoding and YAML is UTF-8</span>
+        <span class="ruby-identifier">args</span> = [<span class="ruby-identifier">sio</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">entry</span>]
+        <span class="ruby-identifier">args</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">:external_encoding</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">UTF_8</span> } <span class="ruby-keyword">if</span>
+          <span class="ruby-constant">Object</span>.<span class="ruby-identifier">const_defined?</span>(<span class="ruby-value">:Encoding</span>)
+
+        <span class="ruby-identifier">gzis</span> = <span class="ruby-constant">Zlib</span><span class="ruby-operator">::</span><span class="ruby-constant">GzipReader</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+
+        <span class="ruby-comment"># YAML wants an instance of IO</span>
+        <span class="ruby-ivar">@metadata</span> = <span class="ruby-identifier">load_gemspec</span>(<span class="ruby-identifier">gzis</span>)
+        <span class="ruby-identifier">has_meta</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">ensure</span>
+        <span class="ruby-identifier">gzis</span>.<span class="ruby-identifier">close</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">gzis</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">'metadata.gz.sig'</span>
+      <span class="ruby-identifier">meta_sig</span> = <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">read</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">'data.tar.gz.sig'</span>
+      <span class="ruby-identifier">data_sig</span> = <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">read</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">'data.tar.gz'</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">security_policy</span>
+        <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">ensure_ssl_available</span>
+        <span class="ruby-identifier">data_dgst</span> = <span class="ruby-identifier">dgst_algo</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-identifier">entry</span>.<span class="ruby-identifier">read</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">security_policy</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">ensure_ssl_available</span>
+
+    <span class="ruby-comment"># map trust policy from string to actual class (or a serialized YAML</span>
+    <span class="ruby-comment"># file, if that exists)</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">security_policy</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Security</span><span class="ruby-operator">::</span><span class="ruby-constant">Policies</span>.<span class="ruby-identifier">key?</span> <span class="ruby-identifier">security_policy</span> <span class="ruby-keyword">then</span>
+        <span class="ruby-comment"># load one of the pre-defined security policies</span>
+        <span class="ruby-identifier">security_policy</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Security</span><span class="ruby-operator">::</span><span class="ruby-constant">Policies</span>[<span class="ruby-identifier">security_policy</span>]
+      <span class="ruby-keyword">elsif</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">security_policy</span> <span class="ruby-keyword">then</span>
+        <span class="ruby-comment"># FIXME: this doesn't work yet</span>
+        <span class="ruby-identifier">security_policy</span> = <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">security_policy</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Exception</span>, <span class="ruby-node">&quot;Unknown trust policy '#{security_policy}'&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">data_sig</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">data_dgst</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">meta_sig</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">meta_dgst</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-comment"># the user has a trust policy, and we have a signed gem</span>
+      <span class="ruby-comment"># file, so use the trust policy to verify the gem signature</span>
+
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">security_policy</span>.<span class="ruby-identifier">verify_gem</span>(<span class="ruby-identifier">data_sig</span>, <span class="ruby-identifier">data_dgst</span>, <span class="ruby-ivar">@metadata</span>.<span class="ruby-identifier">cert_chain</span>)
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Couldn't verify data signature: #{e}&quot;</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">security_policy</span>.<span class="ruby-identifier">verify_gem</span>(<span class="ruby-identifier">meta_sig</span>, <span class="ruby-identifier">meta_dgst</span>, <span class="ruby-ivar">@metadata</span>.<span class="ruby-identifier">cert_chain</span>)
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Couldn't verify metadata signature: #{e}&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">security_policy</span>.<span class="ruby-identifier">only_signed</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Exception</span>, <span class="ruby-string">&quot;Unsigned gem&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># FIXME: should display warning here (trust policy, but</span>
+      <span class="ruby-comment"># either unsigned or badly signed gem file)</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@tarreader</span>.<span class="ruby-identifier">rewind</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">has_meta</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">path</span> = <span class="ruby-identifier">io</span>.<span class="ruby-identifier">path</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:path</span>
+    <span class="ruby-identifier">error</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Package</span><span class="ruby-operator">::</span><span class="ruby-constant">FormatError</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">'no metadata found'</span>, <span class="ruby-identifier">path</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-identifier">error</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+      
+        <div id="open-method" class="method-detail ">
+          <a name="method-c-open"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">open</span><span
+              class="method-args">(io, security_policy = nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="open-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rubygems/package/tar_input.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">io</span>, <span class="ruby-identifier">security_policy</span> = <span class="ruby-keyword">nil</span>,  <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">is</span> = <span class="ruby-identifier">new</span> <span class="ruby-identifier">io</span>, <span class="ruby-identifier">security_policy</span>
+
+  <span class="ruby-keyword">yield</span> <span class="ruby-identifier">is</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-identifier">is</span>.<span class="ruby-identifier">close</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">is</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- open-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- open-method -->
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="close-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rubygems/package/tar_input.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+  <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">close</span>
+  <span class="ruby-ivar">@tarreader</span>.<span class="ruby-identifier">close</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+      
+        <div id="each-method" class="method-detail ">
+          <a name="method-i-each"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">each</span><span
+              class="method-args">(&block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="each-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rubygems/package/tar_input.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-ivar">@tarreader</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">entry</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;data.tar.gz&quot;</span>
+    <span class="ruby-identifier">is</span> = <span class="ruby-identifier">zipped_stream</span> <span class="ruby-identifier">entry</span>
+
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Package</span><span class="ruby-operator">::</span><span class="ruby-constant">TarReader</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">is</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">inner</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">inner</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">ensure</span>
+      <span class="ruby-identifier">is</span>.<span class="ruby-identifier">close</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">is</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@tarreader</span>.<span class="ruby-identifier">rewind</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- each-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each-method -->
+      
+        <div id="extract_entry-method" class="method-detail ">
+          <a name="method-i-extract_entry"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">extract_entry</span><span
+              class="method-args">(destdir, entry, expected_md5sum = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            
+            
+
+            
+            <div class="method-source-code" id="extract_entry-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rubygems/package/tar_input.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">extract_entry</span>(<span class="ruby-identifier">destdir</span>, <span class="ruby-identifier">entry</span>, <span class="ruby-identifier">expected_md5sum</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">dest</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span> <span class="ruby-identifier">destdir</span>, <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-identifier">dest</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">chmod</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">header</span>.<span class="ruby-identifier">mode</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-value">:verbose</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span> <span class="ruby-identifier">dest</span>, <span class="ruby-value">:mode</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">header</span>.<span class="ruby-identifier">mode</span>, <span class="ruby-value">:verbose</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">fsync_dir</span> <span class="ruby-identifier">dest</span>
+    <span class="ruby-identifier">fsync_dir</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-string">&quot;..&quot;</span>)
+
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># it's a file</span>
+  <span class="ruby-identifier">md5</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">expected_md5sum</span>
+  <span class="ruby-identifier">destdir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span> <span class="ruby-identifier">destdir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span>)
+  <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span> <span class="ruby-identifier">destdir</span>, <span class="ruby-value">:mode</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0755</span>, <span class="ruby-value">:verbose</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">destfile</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span> <span class="ruby-identifier">destdir</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">entry</span>.<span class="ruby-identifier">full_name</span>)
+  <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">chmod</span> <span class="ruby-value">0600</span>, <span class="ruby-identifier">destfile</span>, <span class="ruby-value">:verbose</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span> <span class="ruby-comment"># Errno::ENOENT</span>
+
+  <span class="ruby-identifier">open</span> <span class="ruby-identifier">destfile</span>, <span class="ruby-string">&quot;wb&quot;</span>, <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">header</span>.<span class="ruby-identifier">mode</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">os</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">data</span> = <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">read</span> <span class="ruby-value">4096</span>
+      <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">data</span>
+      <span class="ruby-comment"># HACK shouldn't we check the MD5 before writing to disk?</span>
+      <span class="ruby-identifier">md5</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">data</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">expected_md5sum</span>
+      <span class="ruby-identifier">os</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">data</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">os</span>.<span class="ruby-identifier">fsync</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">chmod</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">header</span>.<span class="ruby-identifier">mode</span>, <span class="ruby-identifier">destfile</span>, <span class="ruby-value">:verbose</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">fsync_dir</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">destfile</span>)
+  <span class="ruby-identifier">fsync_dir</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">destfile</span>), <span class="ruby-string">&quot;..&quot;</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">expected_md5sum</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">expected_md5sum</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">md5</span>.<span class="ruby-identifier">hexdigest</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Package</span><span class="ruby-operator">::</span><span class="ruby-constant">BadCheckSum</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- extract_entry-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- extract_entry-method -->
+      
+        <div id="load_gemspec-method" class="method-detail ">
+          <a name="method-i-load_gemspec"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">load_gemspec</span><span
+              class="method-args">(io)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Attempt to YAML-load a gemspec from the given <em>io</em> parameter. 
+Return nil if it fails.</p>
+            
+
+            
+            <div class="method-source-code" id="load_gemspec-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rubygems/package/tar_input.rb, line 193</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_gemspec</span>(<span class="ruby-identifier">io</span>)
+  <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Specification</span>.<span class="ruby-identifier">from_yaml</span> <span class="ruby-identifier">io</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Exception</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- load_gemspec-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- load_gemspec-method -->
+      
+        <div id="zipped_stream-method" class="method-detail ">
+          <a name="method-i-zipped_stream"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">zipped_stream</span><span
+              class="method-args">(entry)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Return an IO stream for the zipped entry.</p>
+
+<p>NOTE:  Originally this method used two approaches, Return a GZipReader
+directly, or read the GZipReader into a string and return a StringIO on the
+string.  The string IO approach was used for versions of ZLib before 1.2.1
+to avoid buffer errors on windows machines.  Then we found that errors
+happened with 1.2.1 as well, so we changed the condition.  Then we
+discovered errors occurred with versions as late as 1.2.3.  At this point
+(after some benchmarking to show we weren’t seriously crippling the
+unpacking speed) we threw our hands in the air and declared that this
+method would use the String IO approach on all platforms at all times.  And
+that’s the way it is.</p>
+
+<p>Revisited.  Here’s the beginning of the long story. <a
+href="http://osdir.com/ml/lang.ruby.gems.devel/2007-06/msg00045.html">osdir.com/ml/lang.ruby.gems.devel/2007-06/msg00045.html</a></p>
+
+<p>StringIO wraping has never worked as a workaround by definition.  Skipping
+initial 10 bytes and passing -MAX_WBITS to Zlib::Inflate luckily works as
+gzip reader, but it only works if the GZip header is 10 bytes long (see
+below) and it does not check inflated stream consistency (CRC value in the
+Gzip trailer.)</p>
+
+<pre>RubyGems generated Gzip Header: 10 bytes
+  magic(2) + method(1) + flag(1) + mtime(4) + exflag(1) + os(1) +
+  orig_name(0) + comment(0)</pre>
+
+<p>Ideally, it must return a GZipReader without meaningless buffering.  We
+have lots of CRuby committers around so let’s fix windows build when we
+received an error.</p>
+            
+
+            
+            <div class="method-source-code" id="zipped_stream-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rubygems/package/tar_input.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">zipped_stream</span>(<span class="ruby-identifier">entry</span>)
+  <span class="ruby-constant">Zlib</span><span class="ruby-operator">::</span><span class="ruby-constant">GzipReader</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">entry</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- zipped_stream-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- zipped_stream-method -->
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+  <div id='tx_TarInput_versioned' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_TarInput_versioned").load("/associated/1.9.3/TarInput.html");</script> <div id='tx_TarInput' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_TarInput").load("/associated/TarInput.html");</script> 
+      
+  </div><!-- documentation -->
+  <div id='dynamic'>
+  </div>
+      
+<div class='grids wrapper' id="footer">
+  <p><small>This page was generated for Ruby 1.9.3</small></p> 
+  
+   <p><a href="http://www.ruby-doc.org">Ruby-doc.org</a> is a service of <a href="http://www.jamesbritt.com">James Britt</a> and <a href="http://www.neurogami.com">Neurogami</a>, an <a href="http://www.neurogami.com">application development company in Scottsdale, AZ</a>.</p>
+ 
+    <p><small>Generated with Ruby-doc Rdoc Generator 0.26.0</small>.</p>
+  </div>
+</div>
+  
+ <script type='text/javascript'>
+$(document).ready(function() {
+      $.ajaxSetup({ cache: false });
+      $("#vulns-alert").load("/associated/vulns.html");
+    });
+
+    </script>
+
+
+ 
+    <script type='text/javascript'>
+
+  function loadPlus(plusdocs){
+    var img_h = $("img.carbonad-image").css('height');
+    //if(img_h != undefined) { //---
+      $(plusdocs).find("div[class='associated_wrapper']").each (function() {
+          $("#" + this.id).append($(plusdocs).find("#" + this.id ));
+          });
+    //} // ---
+  } // end loadPlusdocs
+
+
+$(document).ready(function() {
+    $.ajaxSetup({ cache: false });
+      $.get('/associated/1.9.3/plus_TarInput.html', 
+      function(plusdocs) {
+      setTimeout(function() {
+        loadPlus(plusdocs);
+        }, 2000);
+      }
+      );
+    });
+</script>
+		
+</body>
+</html>
+
+

@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <!-- classpage -- >
+    <!-- RD version: 0.26.0  -->
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  
+  <meta content="2014-04-26 10:52:09 -0700" http-equiv="change-date" />
+  <!-- rel_prefix  = ''  ENV['RDOC_FOR_WEBSITE']   = false-->
+    
+    
+    
+  <!-- rel_prefix = '.'   asset_rel_prefix = ''  --> 
+  <title>Module: Sys (Ruby 1.9.3) </title>
+  <!-- link rel="stylesheet" href=".css/obf.css"  -->
+  <link rel="stylesheet" href="css/inuit.css" >
+  <link rel="stylesheet" href="css/grid.inuit.css" >
+  <link rel="stylesheet" href="css/2011.css" type="text/css" >
+  <link rel="stylesheet" href="css/rdoc.css" type="text/css" >
+
+  <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/rubydoc.js" type="text/javascript" charset="utf-8"></script> 
+
+ 
+<script src="/js/highlight.min.js"></script>
+<script> 
+  hljs.tabReplace = '  ';
+  hljs.initHighlightingOnLoad();
+  </script> 
+
+  <style type='text/css'>
+
+    #vulns-alert #vulns{
+      background-color: #c33 ! important;
+      width: 100%;
+      text-align: center;
+   }
+   
+   #vulns-alert #vulns a {
+    color: #F99 ! important;
+   }
+ </style>
+
+</head>
+
+<body id="top" class="module rdocstar">
+<div id='actionbar' >
+<div class='wrapper'>
+  <ul class='grids g0'></ul>
+</div>
+<span id='vulns-alert'></span>
+</div> <!-- end action bar -->
+ <div class='wrapper'>
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+          
+          
+          <!-- br><a id='alternateFormatLink' class='rotate' href="#" onclick='matchingYardUrl()'>YARD version</a -->
+          
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul id='file-metadata'>
+
+          
+          
+          
+          <li class='in-file'>rake/contrib/sys.rb</li>      
+            
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-copy">#copy</a></li>
+          
+          <li><a href="#method-i-copy_files">#copy_files</a></li>
+          
+          <li><a href="#method-i-delete">#delete</a></li>
+          
+          <li><a href="#method-i-delete_all">#delete_all</a></li>
+          
+          <li><a href="#method-i-for_files">#for_files</a></li>
+          
+          <li><a href="#method-i-indir">#indir</a></li>
+          
+          <li><a href="#method-i-install">#install</a></li>
+          
+          <li><a href="#method-i-link">#link</a></li>
+          
+          <li><a href="#method-i-link_files">#link_files</a></li>
+          
+          <li><a href="#method-i-log">#log</a></li>
+          
+          <li><a href="#method-i-makedirs">#makedirs</a></li>
+          
+          <li><a href="#method-i-quiet">#quiet</a></li>
+          
+          <li><a href="#method-i-ruby">#ruby</a></li>
+          
+          <li><a href="#method-i-run">#run</a></li>
+          
+          <li><a href="#method-i-split_all">#split_all</a></li>
+          
+          <li><a href="#method-i-symlink">#symlink</a></li>
+          
+          <li><a href="#method-i-symlink_files">#symlink_files</a></li>
+          
+          <li><a href="#method-i-verbose">#verbose</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+          
+          
+          
+          <li><a href="./CompositePublisher.html">CompositePublisher</a></li>
+        
+          
+          
+          <li><a href="./Module.html">Module</a></li>
+        
+          
+          
+          <li><a href="./Object.html">Object</a></li>
+        
+          
+          
+          <li><a href="./Rake/AltSystem.html">Rake::AltSystem</a></li>
+        
+          
+          
+          <li><a href="./Rake/Application.html">Rake::Application</a></li>
+        
+          
+          
+          <li><a href="./Rake/Cloneable.html">Rake::Cloneable</a></li>
+        
+          
+          
+          <li><a href="./Rake/CompositePublisher.html">Rake::CompositePublisher</a></li>
+        
+          
+          
+          <li><a href="./Rake/DSL.html">Rake::DSL</a></li>
+        
+          
+          
+          <li><a href="./Rake/DefaultLoader.html">Rake::DefaultLoader</a></li>
+        
+          
+          
+          <li><a href="./Rake/EarlyTime.html">Rake::EarlyTime</a></li>
+        
+          
+          
+          <li><a href="./Rake/FileCreationTask.html">Rake::FileCreationTask</a></li>
+        
+          
+          
+          <li><a href="./Rake/FileList.html">Rake::FileList</a></li>
+        
+          
+          
+          <li><a href="./Rake/FileTask.html">Rake::FileTask</a></li>
+        
+          
+          
+          <li><a href="./Rake/FileUtilsExt.html">Rake::FileUtilsExt</a></li>
+        
+          
+          
+          <li><a href="./Rake/FtpFile.html">Rake::FtpFile</a></li>
+        
+          
+          
+          <li><a href="./Rake/FtpUploader.html">Rake::FtpUploader</a></li>
+        
+          
+          
+          <li><a href="./Rake/InvocationChain.html">Rake::InvocationChain</a></li>
+        
+          
+          
+          <li><a href="./Rake/InvocationChain/EmptyInvocationChain.html">Rake::InvocationChain::EmptyInvocationChain</a></li>
+        
+          
+          
+          <li><a href="./Rake/InvocationExceptionMixin.html">Rake::InvocationExceptionMixin</a></li>
+        
+          
+          
+          <li><a href="./Rake/MakefileLoader.html">Rake::MakefileLoader</a></li>
+        
+          
+          
+          <li><a href="./Rake/MultiTask.html">Rake::MultiTask</a></li>
+        
+          
+          
+          <li><a href="./Rake/NameSpace.html">Rake::NameSpace</a></li>
+        
+          
+          
+          <li><a href="./Rake/PackageTask.html">Rake::PackageTask</a></li>
+        
+          
+          
+          <li><a href="./Rake/PseudoStatus.html">Rake::PseudoStatus</a></li>
+        
+          
+          
+          <li><a href="./Rake/RakeApp.html">Rake::RakeApp</a></li>
+        
+          
+          
+          <li><a href="./Rake/RubyForgePublisher.html">Rake::RubyForgePublisher</a></li>
+        
+          
+          
+          <li><a href="./Rake/RuleRecursionOverflowError.html">Rake::RuleRecursionOverflowError</a></li>
+        
+          
+          
+          <li><a href="./Rake/SshDirPublisher.html">Rake::SshDirPublisher</a></li>
+        
+          
+          
+          <li><a href="./Rake/SshFilePublisher.html">Rake::SshFilePublisher</a></li>
+        
+          
+          
+          <li><a href="./Rake/SshFreshDirPublisher.html">Rake::SshFreshDirPublisher</a></li>
+        
+          
+          
+          <li><a href="./Rake/Task.html">Rake::Task</a></li>
+        
+          
+          
+          <li><a href="./Rake/TaskArgumentError.html">Rake::TaskArgumentError</a></li>
+        
+          
+          
+          <li><a href="./Rake/TaskArguments.html">Rake::TaskArguments</a></li>
+        
+          
+          
+          <li><a href="./Rake/TaskLib.html">Rake::TaskLib</a></li>
+        
+          
+          
+          <li><a href="./Rake/TaskManager.html">Rake::TaskManager</a></li>
+        
+          
+          
+          <li><a href="./Rake/TestTask.html">Rake::TestTask</a></li>
+        
+          
+          
+          <li><a href="./Rake/Win32.html">Rake::Win32</a></li>
+        
+          
+          
+          <li><a href="./Rake/Win32/Win32HomeError.html">Rake::Win32::Win32HomeError</a></li>
+        
+          
+          
+          <li><a href="./SshDirPublisher.html">SshDirPublisher</a></li>
+        
+          
+          
+          <li><a href="./SshFilePublisher.html">SshFilePublisher</a></li>
+        
+          
+          
+          <li><a href="./SshFreshDirPublisher.html">SshFreshDirPublisher</a></li>
+        
+          
+          
+          <li><a href="./String.html">String</a></li>
+        
+          
+          
+          <li><a href="./Sys.html">Sys</a></li>
+        
+          
+          
+          <li><a href="./Time.html">Time</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div> <!-- metadata -->
+  <div class='adzbox'  id="azk83167">
+    
+  </div> 
+  <div id="documentation">
+    <h1 class="module">Sys</h1>
+
+    <div id="description" class="description">
+      
+<p><a href="Sys.html">Sys</a> provides a number of file manipulation tools for
+the convenience of writing Rakefiles.  All commands in this module will
+announce their activity on standard output if the $verbose flag is set
+($verbose = true is the default).  You can control this by globally setting
+$verbose or by using the <code>verbose</code> and <code>quiet</code>
+methods.</p>
+
+<p><a href="Sys.html">Sys</a> has been deprecated in favor of the FileUtils
+module available in Ruby 1.8.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="RUBY">RUBY</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="copy-method" class="method-detail ">
+          <a name="method-i-copy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">copy</span><span
+              class="method-args">(file_name, dest_file)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Copy a single file from <code>file_name</code> to <code>dest_file</code>.</p>
+            
+
+            
+            <div class="method-source-code" id="copy-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">copy</span>(<span class="ruby-identifier">file_name</span>, <span class="ruby-identifier">dest_file</span>)
+  <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;Copying file #{file_name} to #{dest_file}&quot;</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">file_name</span>, <span class="ruby-identifier">dest_file</span>)
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- copy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- copy-method -->
+      
+        <div id="copy_files-method" class="method-detail ">
+          <a name="method-i-copy_files"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">copy_files</span><span
+              class="method-args">(wildcard, dest_dir)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Copy all files matching <code>wildcard</code> into the directory
+<code>dest_dir</code>.</p>
+            
+
+            
+            <div class="method-source-code" id="copy_files-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">copy_files</span>(<span class="ruby-identifier">wildcard</span>, <span class="ruby-identifier">dest_dir</span>)
+  <span class="ruby-identifier">for_matching_files</span>(<span class="ruby-identifier">wildcard</span>, <span class="ruby-identifier">dest_dir</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span><span class="ruby-operator">|</span> <span class="ruby-identifier">copy</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>) }
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- copy_files-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- copy_files-method -->
+      
+        <div id="delete-method" class="method-detail ">
+          <a name="method-i-delete"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">delete</span><span
+              class="method-args">(*wildcards)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Remove all files matching <code>wildcard</code>.  If a matching file is a
+directory, it must be empty to be removed.  used <code>delete_all</code> to
+recursively delete directories.</p>
+            
+
+            
+            <div class="method-source-code" id="delete-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">wildcards</span>)
+  <span class="ruby-identifier">wildcards</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">wildcard</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Dir</span>[<span class="ruby-identifier">wildcard</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fn</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">fn</span>)
+        <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;Deleting directory #{fn}&quot;</span>
+        <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">fn</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;Deleting file #{fn}&quot;</span>
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">fn</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- delete-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- delete-method -->
+      
+        <div id="delete_all-method" class="method-detail ">
+          <a name="method-i-delete_all"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">delete_all</span><span
+              class="method-args">(*wildcards)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Recursively delete all files and directories matching
+<code>wildcard</code>.</p>
+            
+
+            
+            <div class="method-source-code" id="delete_all-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_all</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">wildcards</span>)
+  <span class="ruby-identifier">wildcards</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">wildcard</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Dir</span>[<span class="ruby-identifier">wildcard</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fn</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">fn</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">fn</span>)
+        <span class="ruby-constant">Dir</span>[<span class="ruby-node">&quot;#{fn}/*&quot;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">subfn</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">subfn</span><span class="ruby-operator">==</span><span class="ruby-string">'.'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">subfn</span><span class="ruby-operator">==</span><span class="ruby-string">'..'</span>
+          <span class="ruby-identifier">delete_all</span>(<span class="ruby-identifier">subfn</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;Deleting directory #{fn}&quot;</span>
+        <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">fn</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;Deleting file #{fn}&quot;</span>
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">fn</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- delete_all-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- delete_all-method -->
+      
+        <div id="for_files-method" class="method-detail ">
+          <a name="method-i-for_files"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">for_files</span><span
+              class="method-args">(*wildcards)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Perform a block with each file matching a set of wildcards.</p>
+            
+
+            
+            <div class="method-source-code" id="for_files-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">for_files</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">wildcards</span>)
+  <span class="ruby-identifier">wildcards</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">wildcard</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Dir</span>[<span class="ruby-identifier">wildcard</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fn</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">fn</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- for_files-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- for_files-method -->
+      
+        <div id="indir-method" class="method-detail ">
+          <a name="method-i-indir"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">indir</span><span
+              class="method-args">(dir)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Make <code>dir</code> the current working directory for the duration of
+executing the given block.</p>
+            
+
+            
+            <div class="method-source-code" id="indir-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">indir</span>(<span class="ruby-identifier">dir</span>)
+  <span class="ruby-identifier">olddir</span> = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">pwd</span>
+  <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span>(<span class="ruby-identifier">dir</span>)
+  <span class="ruby-keyword">yield</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span>(<span class="ruby-identifier">olddir</span>)
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- indir-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- indir-method -->
+      
+        <div id="install-method" class="method-detail ">
+          <a name="method-i-install"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">install</span><span
+              class="method-args">(wildcard, dest_dir, mode)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Install all the files matching <code>wildcard</code> into the
+<code>dest_dir</code> directory.  The permission mode is set to
+<code>mode</code>.</p>
+            
+
+            
+            <div class="method-source-code" id="install-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">install</span>(<span class="ruby-identifier">wildcard</span>, <span class="ruby-identifier">dest_dir</span>, <span class="ruby-identifier">mode</span>)
+  <span class="ruby-constant">Dir</span>[<span class="ruby-identifier">wildcard</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fn</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">install</span>(<span class="ruby-identifier">fn</span>, <span class="ruby-identifier">dest_dir</span>, <span class="ruby-identifier">mode</span>, <span class="ruby-identifier">$verbose</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- install-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- install-method -->
+      
+        <div id="link-method" class="method-detail ">
+          <a name="method-i-link"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">link</span><span
+              class="method-args">(file_name, dest_file)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Link <code>file_name</code> to <code>dest_file</code>.</p>
+            
+
+            
+            <div class="method-source-code" id="link-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">link</span>(<span class="ruby-identifier">file_name</span>, <span class="ruby-identifier">dest_file</span>)
+  <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;Linking file #{file_name} to #{dest_file}&quot;</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">link</span>(<span class="ruby-identifier">file_name</span>, <span class="ruby-identifier">dest_file</span>)
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- link-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- link-method -->
+      
+        <div id="link_files-method" class="method-detail ">
+          <a name="method-i-link_files"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">link_files</span><span
+              class="method-args">(wildcard, dest_dir)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Link all files matching <code>wildcard</code> into the directory
+<code>dest_dir</code>.</p>
+            
+
+            
+            <div class="method-source-code" id="link_files-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">link_files</span>(<span class="ruby-identifier">wildcard</span>, <span class="ruby-identifier">dest_dir</span>)
+  <span class="ruby-identifier">for_matching_files</span>(<span class="ruby-identifier">wildcard</span>, <span class="ruby-identifier">dest_dir</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span><span class="ruby-operator">|</span> <span class="ruby-identifier">link</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>) }
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- link_files-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- link_files-method -->
+      
+        <div id="log-method" class="method-detail ">
+          <a name="method-i-log"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">log</span><span
+              class="method-args">(msg)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Write a message to standard error if $verbose is enabled.</p>
+            
+
+            
+            <div class="method-source-code" id="log-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">log</span>(<span class="ruby-identifier">msg</span>)
+  <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;  &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$trace</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">$verbose</span>
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">msg</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$verbose</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- log-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- log-method -->
+      
+        <div id="makedirs-method" class="method-detail ">
+          <a name="method-i-makedirs"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">makedirs</span><span
+              class="method-args">(*dirs)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Make the directories given in <code>dirs</code>.</p>
+            
+
+            
+            <div class="method-source-code" id="makedirs-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">makedirs</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">dirs</span>)
+  <span class="ruby-identifier">dirs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fn</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;Making directory #{fn}&quot;</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">makedirs</span>(<span class="ruby-identifier">fn</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- makedirs-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- makedirs-method -->
+      
+        <div id="quiet-method" class="method-detail ">
+          <a name="method-i-quiet"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">quiet</span><span
+              class="method-args">(&block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Perform a block with $verbose disabled.</p>
+            
+
+            
+            <div class="method-source-code" id="quiet-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">quiet</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">with_verbose</span>(<span class="ruby-keyword">false</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- quiet-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- quiet-method -->
+      
+        <div id="ruby-method" class="method-detail ">
+          <a name="method-i-ruby"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ruby</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Run a Ruby interpreter with the given arguments.</p>
+            
+
+            
+            <div class="method-source-code" id="ruby-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ruby</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">run</span> <span class="ruby-node">&quot;#{RUBY} #{args.join(' ')}&quot;</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- ruby-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ruby-method -->
+      
+        <div id="run-method" class="method-detail ">
+          <a name="method-i-run"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run</span><span
+              class="method-args">(cmd)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Run the system command <code>cmd</code>.</p>
+            
+
+            
+            <div class="method-source-code" id="run-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span>(<span class="ruby-identifier">cmd</span>)
+  <span class="ruby-identifier">log</span> <span class="ruby-identifier">cmd</span>
+  <span class="ruby-identifier">system</span>(<span class="ruby-identifier">cmd</span>) <span class="ruby-keyword">or</span> <span class="ruby-identifier">fail</span> <span class="ruby-node">&quot;Command Failed: [#{cmd}]&quot;</span>
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- run-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run-method -->
+      
+        <div id="split_all-method" class="method-detail ">
+          <a name="method-i-split_all"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">split_all</span><span
+              class="method-args">(path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Split a file path into individual directory names.</p>
+
+<p>For example:</p>
+
+<pre class="ruby"><span class="ruby-identifier">split_all</span>(<span class="ruby-string">&quot;a/b/c&quot;</span>) =<span class="ruby-operator">&gt;</span>  [<span class="ruby-string">'a'</span>, <span class="ruby-string">'b'</span>, <span class="ruby-string">'c'</span>]
+</pre>
+            
+
+            
+            <div class="method-source-code" id="split_all-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">split_all</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">head</span>, <span class="ruby-identifier">tail</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">split</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">return</span> [<span class="ruby-identifier">tail</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">head</span> <span class="ruby-operator">==</span> <span class="ruby-string">'.'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">tail</span> <span class="ruby-operator">==</span> <span class="ruby-string">'/'</span>
+  <span class="ruby-keyword">return</span> [<span class="ruby-identifier">head</span>, <span class="ruby-identifier">tail</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">head</span> <span class="ruby-operator">==</span> <span class="ruby-string">'/'</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">split_all</span>(<span class="ruby-identifier">head</span>) <span class="ruby-operator">+</span> [<span class="ruby-identifier">tail</span>]
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- split_all-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- split_all-method -->
+      
+        <div id="symlink-method" class="method-detail ">
+          <a name="method-i-symlink"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">symlink</span><span
+              class="method-args">(file_name, dest_file)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Symlink <code>file_name</code> to <code>dest_file</code>.</p>
+            
+
+            
+            <div class="method-source-code" id="symlink-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">symlink</span>(<span class="ruby-identifier">file_name</span>, <span class="ruby-identifier">dest_file</span>)
+  <span class="ruby-identifier">log</span> <span class="ruby-node">&quot;Symlinking file #{file_name} to #{dest_file}&quot;</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">symlink</span>(<span class="ruby-identifier">file_name</span>, <span class="ruby-identifier">dest_file</span>)
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- symlink-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- symlink-method -->
+      
+        <div id="symlink_files-method" class="method-detail ">
+          <a name="method-i-symlink_files"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">symlink_files</span><span
+              class="method-args">(wildcard, dest_dir)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Symlink all files matching <code>wildcard</code> into the directory
+<code>dest_dir</code>.</p>
+            
+
+            
+            <div class="method-source-code" id="symlink_files-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">symlink_files</span>(<span class="ruby-identifier">wildcard</span>, <span class="ruby-identifier">dest_dir</span>)
+  <span class="ruby-identifier">for_matching_files</span>(<span class="ruby-identifier">wildcard</span>, <span class="ruby-identifier">dest_dir</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span><span class="ruby-operator">|</span> <span class="ruby-identifier">link</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>) }
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- symlink_files-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- symlink_files-method -->
+      
+        <div id="verbose-method" class="method-detail ">
+          <a name="method-i-verbose"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">verbose</span><span
+              class="method-args">(&block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+          <div>
+  
+            
+            <p>Perform a block with $verbose enabled.</p>
+            
+
+            
+            <div class="method-source-code" id="verbose-source">
+              <pre> <!-- method.markup_code 290 -->
+               <span class="ruby-comment"># File rake/contrib/sys.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">verbose</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">with_verbose</span>(<span class="ruby-keyword">true</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span>
+            </pre> 
+            </div><!-- verbose-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- verbose-method -->
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+  <div id='tx_Sys_versioned' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_Sys_versioned").load("/associated/1.9.3/Sys.html");</script> <div id='tx_Sys' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_Sys").load("/associated/Sys.html");</script> 
+      
+  </div><!-- documentation -->
+  <div id='dynamic'>
+  </div>
+      
+<div class='grids wrapper' id="footer">
+  <p><small>This page was generated for Ruby 1.9.3</small></p> 
+  
+   <p><a href="http://www.ruby-doc.org">Ruby-doc.org</a> is provided by <a href="http://www.jamesbritt.com">James Britt</a> and <a href="http://www.neurogami.com">Neurogami</a>. <a href="http://www.neurogami.com">Maximum R+D</a>.</p>
+ 
+    <p><small>Generated with Ruby-doc Rdoc Generator 0.26.0</small>.</p>
+  </div>
+</div>
+  
+ <script type='text/javascript'>
+$(document).ready(function() {
+      $.ajaxSetup({ cache: false });
+      $("#vulns-alert").load("/associated/vulns.html");
+    });
+
+    </script>
+
+
+ 
+    <script type='text/javascript'>
+
+  function loadPlus(plusdocs){
+    var img_h = $("img.carbonad-image").css('height');
+    //if(img_h != undefined) { //---
+      $(plusdocs).find("div[class='associated_wrapper']").each (function() {
+          $("#" + this.id).append($(plusdocs).find("#" + this.id ));
+          });
+    //} // ---
+  } // end loadPlusdocs
+
+
+$(document).ready(function() {
+    $.ajaxSetup({ cache: false });
+      $.get('/associated/1.9.3/plus_Sys.html', 
+      function(plusdocs) {
+      setTimeout(function() {
+        loadPlus(plusdocs);
+        }, 2000);
+      }
+      );
+    });
+</script>
+		
+</body>
+</html>
+
+

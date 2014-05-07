@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <!-- classpage -- >
+    <!-- RD version: 0.26.0  -->
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  
+  <meta content="2014-04-26 10:50:17 -0700" http-equiv="change-date" />
+  <!-- rel_prefix  = ''  ENV['RDOC_FOR_WEBSITE']   = false-->
+    
+    
+    
+  <!-- rel_prefix = '.'   asset_rel_prefix = ''  --> 
+  <title>Module: Fcntl (Ruby 1.9.3) </title>
+  <!-- link rel="stylesheet" href=".css/obf.css"  -->
+  <link rel="stylesheet" href="css/inuit.css" >
+  <link rel="stylesheet" href="css/grid.inuit.css" >
+  <link rel="stylesheet" href="css/2011.css" type="text/css" >
+  <link rel="stylesheet" href="css/rdoc.css" type="text/css" >
+
+  <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/rubydoc.js" type="text/javascript" charset="utf-8"></script> 
+
+ 
+<script src="/js/highlight.min.js"></script>
+<script> 
+  hljs.tabReplace = '  ';
+  hljs.initHighlightingOnLoad();
+  </script> 
+
+  <style type='text/css'>
+
+    #vulns-alert #vulns{
+      background-color: #c33 ! important;
+      width: 100%;
+      text-align: center;
+   }
+   
+   #vulns-alert #vulns a {
+    color: #F99 ! important;
+   }
+ </style>
+
+</head>
+
+<body id="top" class="module rdocstar">
+<div id='actionbar' >
+<div class='wrapper'>
+  <ul class='grids g0'></ul>
+</div>
+<span id='vulns-alert'></span>
+</div> <!-- end action bar -->
+ <div class='wrapper'>
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+          
+          
+          <!-- br><a id='alternateFormatLink' class='rotate' href="#" onclick='matchingYardUrl()'>YARD version</a -->
+          
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul id='file-metadata'>
+
+          
+          
+          
+          <li class='in-file'>fcntl/fcntl.c</li>      
+            
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+          
+          
+          
+          <li><a href="./Fcntl.html">Fcntl</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div> <!-- metadata -->
+  <div class='adzbox'  id="azk83167">
+    
+  </div> 
+  <div id="documentation">
+    <h1 class="module">Fcntl</h1>
+
+    <div id="description" class="description">
+      
+<p><a href="Fcntl.html">Fcntl</a> loads the constants defined in the system's
+&lt;fcntl.h&gt; C header file, and used with both the fcntl(2) and open(2)
+POSIX system calls.</p>
+
+<p>Copyright (C) 1997-2001 Yukihiro Matsumoto</p>
+
+<p>Documented by mathew &lt;meta@pobox.com&gt;</p>
+
+<h1 id="module-Fcntl-label-Usage">Usage<span><a href="#module-Fcntl-label-Usage">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<p>To perform a fcntl(2) operation, use IO::fcntl in the core classes.</p>
+
+<p>To perform an open(2) operation, use IO::sysopen.</p>
+
+<p>The set of operations and constants available depends upon specific OS
+platform. Some values listed below may not be supported on your system.</p>
+
+<p>The constants supported by Ruby for use with IO::fcntl are:</p>
+<ul><li>
+<p><a href="Fcntl.html#F_DUPFD">F_DUPFD</a> - duplicate a close-on-exec file
+handle to a non-close-on-exec file handle.</p>
+</li><li>
+<p><a href="Fcntl.html#F_GETFD">F_GETFD</a> - read the close-on-exec flag of a
+file handle.</p>
+</li><li>
+<p><a href="Fcntl.html#F_SETFD">F_SETFD</a> - set the close-on-exec flag of a
+file handle.</p>
+</li><li>
+<p><a href="Fcntl.html#FD_CLOEXEC">FD_CLOEXEC</a> - the value of the
+close-on-exec flag.</p>
+</li><li>
+<p><a href="Fcntl.html#F_GETFL">F_GETFL</a> - get file descriptor flags.</p>
+</li><li>
+<p><a href="Fcntl.html#F_SETFL">F_SETFL</a> - set file descriptor flags.</p>
+</li><li>
+<p><a href="Fcntl.html#O_APPEND">O_APPEND</a>, <a
+href="Fcntl.html#O_NONBLOCK">O_NONBLOCK</a>, etc (see below) - file
+descriptor flag values for the above.</p>
+</li><li>
+<p><a href="Fcntl.html#F_GETLK">F_GETLK</a> - determine whether a given region
+of a file is locked.</p>
+</li><li>
+<p><a href="Fcntl.html#F_SETLK">F_SETLK</a> - acquire a lock on a region of a
+file.</p>
+</li><li>
+<p><a href="Fcntl.html#F_SETLKW">F_SETLKW</a> - acquire a lock on a region of
+a file, waiting if necessary.</p>
+</li><li>
+<p><a href="Fcntl.html#F_RDLCK">F_RDLCK</a>, <a
+href="Fcntl.html#F_WRLCK">F_WRLCK</a>, <a
+href="Fcntl.html#F_UNLCK">F_UNLCK</a> - types of lock for the above.</p>
+</li></ul>
+
+<p>The constants supported by Ruby for use with IO::sysopen are:</p>
+<ul><li>
+<p><a href="Fcntl.html#O_APPEND">O_APPEND</a> - open file in append mode.</p>
+</li><li>
+<p><a href="Fcntl.html#O_NOCTTY">O_NOCTTY</a> - open tty without it becoming
+controlling tty.</p>
+</li><li>
+<p><a href="Fcntl.html#O_CREAT">O_CREAT</a> - create file if it doesn't exist.</p>
+</li><li>
+<p><a href="Fcntl.html#O_EXCL">O_EXCL</a> - used with <a
+href="Fcntl.html#O_CREAT">O_CREAT</a>, fail if file exists.</p>
+</li><li>
+<p><a href="Fcntl.html#O_TRUNC">O_TRUNC</a> - truncate file on open.</p>
+</li><li>
+<p><a href="Fcntl.html#O_NONBLOCK">O_NONBLOCK</a> / <a
+href="Fcntl.html#O_NDELAY">O_NDELAY</a> - open in non-blocking mode.</p>
+</li><li>
+<p><a href="Fcntl.html#O_RDONLY">O_RDONLY</a> - open read-only.</p>
+</li><li>
+<p><a href="Fcntl.html#O_WRONLY">O_WRONLY</a> - open write-only.</p>
+</li><li>
+<p><a href="Fcntl.html#O_RDWR">O_RDWR</a> - open read-write.</p>
+</li><li>
+<p><a href="Fcntl.html#O_ACCMODE">O_ACCMODE</a> - mask to extract read/write
+flags.</p>
+</li></ul>
+
+<p>Example:</p>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">'fcntl'</span>
+
+<span class="ruby-identifier">fd</span> = <span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-identifier">sysopen</span>(<span class="ruby-string">'/tmp/tempfile'</span>,
+     <span class="ruby-constant">Fcntl</span><span class="ruby-operator">::</span><span class="ruby-constant">O_WRONLY</span> <span class="ruby-operator">|</span> <span class="ruby-constant">Fcntl</span><span class="ruby-operator">::</span><span class="ruby-constant">O_EXCL</span> <span class="ruby-operator">|</span> <span class="ruby-constant">Fcntl</span><span class="ruby-operator">::</span><span class="ruby-constant">O_CREAT</span>)
+<span class="ruby-identifier">f</span> = <span class="ruby-constant">IO</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">fd</span>)
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">syswrite</span>(<span class="ruby-string">&quot;TEMP DATA&quot;</span>)
+<span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+</pre>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="FD_CLOEXEC">FD_CLOEXEC</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="F_DUPFD">F_DUPFD</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="F_GETFD">F_GETFD</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="F_GETFL">F_GETFL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="F_GETLK">F_GETLK</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="F_RDLCK">F_RDLCK</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="F_SETFD">F_SETFD</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="F_SETFL">F_SETFL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="F_SETLK">F_SETLK</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="F_SETLKW">F_SETLKW</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="F_UNLCK">F_UNLCK</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="F_WRLCK">F_WRLCK</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="O_ACCMODE">O_ACCMODE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="O_APPEND">O_APPEND</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="O_CREAT">O_CREAT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="O_EXCL">O_EXCL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="O_NDELAY">O_NDELAY</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="O_NOCTTY">O_NOCTTY</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="O_NONBLOCK">O_NONBLOCK</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="O_RDONLY">O_RDONLY</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="O_RDWR">O_RDWR</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="O_TRUNC">O_TRUNC</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="O_WRONLY">O_WRONLY</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+    </div><!-- 5Buntitled-5D -->
+  
+  <div id='tx_Fcntl_versioned' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_Fcntl_versioned").load("/associated/1.9.3/Fcntl.html");</script> <div id='tx_Fcntl' class='associated_wrapper'></div><script type='text/javascript'>$("#tx_Fcntl").load("/associated/Fcntl.html");</script> 
+      
+  </div><!-- documentation -->
+  <div id='dynamic'>
+  </div>
+      
+<div class='grids wrapper' id="footer">
+  <p><small>This page was generated for Ruby 1.9.3</small></p> 
+  
+   <p><a href="http://www.ruby-doc.org">Ruby-doc.org</a> is provided by <a href="http://www.jamesbritt.com">James Britt</a> and <a href="http://www.neurogami.com">Neurogami</a>. <a href="http://www.neurogami.com">Hack your world.  Feed your head.  Live curious</a>.</p>
+ 
+    <p><small>Generated with Ruby-doc Rdoc Generator 0.26.0</small>.</p>
+  </div>
+</div>
+  
+ <script type='text/javascript'>
+$(document).ready(function() {
+      $.ajaxSetup({ cache: false });
+      $("#vulns-alert").load("/associated/vulns.html");
+    });
+
+    </script>
+
+
+ 
+    <script type='text/javascript'>
+
+  function loadPlus(plusdocs){
+    var img_h = $("img.carbonad-image").css('height');
+    //if(img_h != undefined) { //---
+      $(plusdocs).find("div[class='associated_wrapper']").each (function() {
+          $("#" + this.id).append($(plusdocs).find("#" + this.id ));
+          });
+    //} // ---
+  } // end loadPlusdocs
+
+
+$(document).ready(function() {
+    $.ajaxSetup({ cache: false });
+      $.get('/associated/1.9.3/plus_Fcntl.html', 
+      function(plusdocs) {
+      setTimeout(function() {
+        loadPlus(plusdocs);
+        }, 2000);
+      }
+      );
+    });
+</script>
+		
+</body>
+</html>
+
+

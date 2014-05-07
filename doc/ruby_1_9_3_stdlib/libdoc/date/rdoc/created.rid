@@ -1,0 +1,7 @@
+Sat, 26 Apr 2014 10:49:42 -0700
+date/date_core.c	Sat, 26 Apr 2014 10:08:05 -0700
+date/date_parse.c	Sat, 26 Apr 2014 10:08:05 -0700
+date/date_strftime.c	Sat, 26 Apr 2014 10:08:05 -0700
+date/date_strptime.c	Sat, 26 Apr 2014 10:08:05 -0700
+date/lib/date/format.rb	Sat, 26 Apr 2014 10:08:05 -0700
+date/lib/date.rb	Sat, 26 Apr 2014 10:08:05 -0700

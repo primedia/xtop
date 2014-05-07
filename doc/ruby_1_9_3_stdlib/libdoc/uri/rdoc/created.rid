@@ -1,0 +1,10 @@
+Sat, 26 Apr 2014 10:57:41 -0700
+uri.rb	Sat, 26 Apr 2014 10:08:03 -0700
+uri/common.rb	Sat, 26 Apr 2014 10:08:02 -0700
+uri/ftp.rb	Sat, 26 Apr 2014 10:08:02 -0700
+uri/generic.rb	Sat, 26 Apr 2014 10:08:02 -0700
+uri/http.rb	Sat, 26 Apr 2014 10:08:02 -0700
+uri/https.rb	Sat, 26 Apr 2014 10:08:02 -0700
+uri/ldap.rb	Sat, 26 Apr 2014 10:08:02 -0700
+uri/ldaps.rb	Sat, 26 Apr 2014 10:08:02 -0700
+uri/mailto.rb	Sat, 26 Apr 2014 10:08:02 -0700

@@ -8,29 +8,45 @@ Xtop
 
 ## Requirements
 
-...
+Ruby 1.9.3 or greater. Ruby 2.0 support is untested right now, so please file an issue if you
+experience a problem.
 
-## Installation
+## Installation (Gemfile)
 
+Add the Primedia gem source to your Gemfile:
 
+    source 'http://gems.idg.primedia.com'
+    
 Add this line to your application's Gemfile:
 
     gem 'xtop'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
-Or install it yourself as:
+## Installation (Shell)
+
+Add the Primedia gem source:
+
+    gem sources -a http://gems01.lab.primedia.com/
+
+Install it via the gem command:
 
     $ gem install xtop
 
-
 ## Usage
 
-To use Xtop (experimental, for use while developing):
+To use Xtop, run the command:
 
-    ruby main.rb
+    xtop
+
+You should have a .xtop.rb file either:
+
+1) In the directory you are calling it from
+2) In your $HOME directory
+
+If you don't have either one, it will exit immediately with no output.
 
 ## Contributing
 
@@ -42,11 +58,16 @@ To use Xtop (experimental, for use while developing):
 
 ## Running the Tests
 
-`bundle exec rake`
+There are currently no tests.
 
 ## Credits
 
-...
+Jack Morrill
+Edward Leung
+Eric Toulson
+Colin Rymer
+Tyler Long
+Tyler Boyd
 
 ## License
 

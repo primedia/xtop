@@ -1,9 +1,0 @@
-Sat, 26 Apr 2014 10:53:56 -0700
-shell.rb	Sat, 26 Apr 2014 10:08:03 -0700
-shell/builtin-command.rb	Sat, 26 Apr 2014 10:08:02 -0700
-shell/command-processor.rb	Sat, 26 Apr 2014 10:08:02 -0700
-shell/error.rb	Sat, 26 Apr 2014 10:08:02 -0700
-shell/filter.rb	Sat, 26 Apr 2014 10:08:02 -0700
-shell/process-controller.rb	Sat, 26 Apr 2014 10:08:02 -0700
-shell/system-command.rb	Sat, 26 Apr 2014 10:08:02 -0700
-shell/version.rb	Sat, 26 Apr 2014 10:08:02 -0700

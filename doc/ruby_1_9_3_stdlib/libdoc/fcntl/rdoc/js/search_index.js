@@ -1,1 +1,0 @@
-var search_data = {"index":{"searchIndex":["fcntl"],"longSearchIndex":["fcntl"],"info":[["Fcntl","","Fcntl.html","","<p>Fcntl loads the constants defined in the system’s &lt;fcntl.h&gt; C header\nfile, and used with both the …\n"]]}}

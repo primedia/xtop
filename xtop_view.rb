@@ -64,17 +64,17 @@ class XtopView
 
   def init_colors(colormap=[:green, :yellow, :red, :white])
     constants = {green: COLOR_GREEN, yellow: COLOR_YELLOW, red: COLOR_RED, white: COLOR_WHITE}
-    start_color
+    start_color # initialize color output
     @colormap = {}
     colormap.each_with_index do |color, i|
       @colormap[color] = i+1
-      init_pair(i+1, constants[color], COLOR_BLACK)
+      init_pair(i+1, constants[color], COLOR_BLACK) # save a fg/bg color pair at index i+1
     end
   end
 
   def add_col2_line(val1, val2, opts={color: 4})
-    attron(color_pair(opts[:color]))
-    addstr(sprintf("%-#{cols-10}s%-10s", val1, val2))
-    attroff(color_pair(opts[:color]))
+    attron(color_pair(opts[:color])) # change color
+    addstr(sprintf("%-#{cols-10}s%-10s", val1, val2)) # write string
+    attroff(color_pair(opts[:color])) # change color back
   end
 end

@@ -3,8 +3,8 @@
 # return :ok for green and :error for red. Any other result or a timeout
 # causes the status line ot be yellow.
 class UrlChecker
-  TIMEOUT = 0.5
-  INTERVAL = 0.1
+  TIMEOUT = 15
+  INTERVAL = 0.5
 
   def self.check(view, checkers={})
     checker_threads = {}

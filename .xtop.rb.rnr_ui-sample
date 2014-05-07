@@ -1,0 +1,34 @@
+require File.expand_path("../config/environment", __FILE__)
+
+def rescue_familiar_exception
+  yield
+rescue NoMethodError => e
+  if e.to_s.match(/undefined method .delete. for nil/)
+    @rescued = "#{e}\n(this usually means the server is returning an invalid response)"
+  else
+    raise $!
+  end
+rescue
+  raise $!
+end
+
+def find_user
+  quietly do
+    @user = User.find("IWS_ADMIN@rentpath.com").whitelist
+  end
+end
+
+{
+  "http://localhost:2000/user_data" => lambda {
+    @rescued = false
+    @user = nil
+
+    rescue_familiar_exception { find_user }
+
+    if @user && @user["has-access"] && @rescued == false
+      :ok
+    else
+      :error
+    end
+  }
+}

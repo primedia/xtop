@@ -2,6 +2,8 @@ Dir.glob(File.expand_path('../xtop_*.rb', __FILE__)).each { |f| require f }
 
 file = `pwd`.chomp + "/.xtop.rb"
 
+Thread.abort_on_exception = true
+
 if File.exists?(file)
   view = XtopView.new(eval(File.read(file)))
 elsif File.exists?(File.expand_path("~/.xtop.rb"))

@@ -1,0 +1,5 @@
+{
+  "google.com" => proc { sleep Random.rand(5)/4.0; :ok },
+  "yahoo.com" => proc { :error },
+  "bing.com" => proc { :ok }
+}

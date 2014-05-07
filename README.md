@@ -43,8 +43,8 @@ To use Xtop, run the command:
 
 You should have a .xtop.rb file either:
 
-1) In the directory you are calling it from
-2) In your $HOME directory
+1. In the directory you are calling it from
+2. In your $HOME directory
 
 If you don't have either one, it will exit immediately with no output.
 
